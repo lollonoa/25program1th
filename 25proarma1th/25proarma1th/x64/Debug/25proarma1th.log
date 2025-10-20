@@ -1,2 +1,21 @@
 ﻿  소스.cpp
-  25proarma1th.vcxproj -> D:\Users\서동건\25program1th\25proarma1th\x64\Debug\25proarma1th.exe
+D:\Users\서동건\25program1th\25proarma1th\25proarma1th\소스.cpp(60,19): error C2563: 정식 매개 변수 목록과 일치하지 않는 항목이 있습니다.
+      D:\Users\서동건\25program1th\25proarma1th\25proarma1th\소스.cpp(60,19):
+      템플릿 인스턴스화 컨텍스트(가장 오래된 인스턴스화 컨텍스트)가
+          D:\Users\서동건\25program1th\25proarma1th\25proarma1th\소스.cpp(79,12):
+          컴파일되는 클래스 템플릿 인스턴스화 'List<int>'에 대한 참조를 확인하세요.
+          D:\Users\서동건\25program1th\25proarma1th\25proarma1th\소스.cpp(57,7):
+          클래스 템플릿 멤버 함수 'void List<int>::pop_front(void)'을(를) 컴파일하는 중입니다.
+              D:\Users\서동건\25program1th\25proarma1th\25proarma1th\소스.cpp(87,16):
+              'main'에서 'List<int>::pop_front'에 대한 첫 번째 참조를 확인하세요.
+  
+D:\Users\서동건\25program1th\25proarma1th\25proarma1th\소스.cpp(60,19): error C2568: '=': 함수 오버로드를 확인할 수 없습니다.
+      D:\Users\서동건\25program1th\25proarma1th\25proarma1th\소스.cpp(60,19):
+      'const _Elem *std::data(std::initializer_list<_Elem>) noexcept'일 수 있습니다.
+      D:\Users\서동건\25program1th\25proarma1th\25proarma1th\소스.cpp(60,19):
+      또는       '_Ty *std::data(_Ty (&)[_Size]) noexcept'
+      D:\Users\서동건\25program1th\25proarma1th\25proarma1th\소스.cpp(60,19):
+      또는       'unknown-type std::data(const _Container &) noexcept(<expr>)'
+      D:\Users\서동건\25program1th\25proarma1th\25proarma1th\소스.cpp(60,19):
+      또는       'unknown-type std::data(_Container &) noexcept(<expr>)'
+  
