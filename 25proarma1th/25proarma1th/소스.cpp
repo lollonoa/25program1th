@@ -1,90 +1,33 @@
 #include "stdafx.h"
 template<typename T>
-class List
+class Vector
 {
 private:
-	struct Node
-	{
-		T data;
-		Node* next;
-	};
+	int count;
+	int capacity;
 
-	int size;
-	Node* head;
-
+	T* pointer;
+	
 public:
-	List()
+	Vector()
 	{
-		size = 0;
-		head = nullptr;
+		count = 0;
+		capacity = 0;
+		pointer = nullptr;
 	}
-	void push_back(T data)
+	void resize(int newSize)
 	{
-		Node* newNode = new Node;
-		newNode->data = data;
-		
-		if (head == nullptr)
-		{
-			head = newNode;
-			newNode->next = head;
-		}
-		else
-		{
-			newNode->next = head->next;
-			head->next = newNode;
-			head = newNode;
-		}
-	size++;
-	}
-	void push_front(T data)
-	{
-		Node* newNode = new Node;
-		newNode->data = data;
+		capacity = newSize;
+		T* temporary = capacity;
+		temporary = nullptr;
+		pointer = temporary;
 
-		if (head == nullptr)
-		{
-			head = newNode;
-			newNode->next = head;
-		}
-		else
-		{
-			newNode->next = head->next;
-
-			head->next = newNode;
-		}
-		size++;
-	}
-	void pop_front()
-	{
-		Node* newNode = new Node;
-		newNode->data = data;
-		
-		if (head == nullptr)
-		{
-			cout << "linked list is empty" << endl;
-			return;
-		}
-		else
-		{
-			Node* deleteNode = newNode;
-			head->next = newNode;
-			newNode->next = head->next;
-		}
-		size--;
 	}
 };
 
 int main()
 {
-	List<int> list;
-
-	list.push_back(10);
-	list.push_back(20);
-
-	list.push_front(5);
-	list.push_front(1);
-
-	list.pop_front();
+	Vector<int> vector;
 
 	return 0;
 }
