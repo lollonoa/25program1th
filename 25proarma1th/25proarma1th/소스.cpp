@@ -1,33 +1,35 @@
 #include "stdafx.h"
 template<typename T>
-class Vector
+
+class Stack
 {
 private:
-	int count;
+	int highset;
 	int capacity;
 
-	T* pointer;
-	
+	T* container;
 public:
-	Vector()
+	Stack()
 	{
-		count = 0;
+		highset = -1;
 		capacity = 0;
-		pointer = nullptr;
-	}
-	void resize(int newSize)
-	{
-		capacity = newSize;
-		T* temporary = capacity;
-		temporary = nullptr;
-		pointer = temporary;
 
+		container = nullptr;
+
+	}
+	void push(T data)
+	{
+		T* resize = new T[highset];
+		for (int i = 0; i < capacity; i++)
+		{
+			resize[i] = NULL;
+		}
 	}
 };
 
 int main()
 {
-	Vector<int> vector;
+
 
 	return 0;
 }
