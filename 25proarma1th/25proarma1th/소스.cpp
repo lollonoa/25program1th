@@ -1,35 +1,67 @@
 #include "stdafx.h"
+#define SIZE 5
 template<typename T>
-
-class Stack
+class Queue
 {
 private:
-	int highset;
-	int capacity;
+	int rear;
+	int front;
 
-	T* container;
+	T* container[SIZE];
 public:
-	Stack()
+	Queue()
 	{
-		highset = -1;
-		capacity = 0;
+		rear = 0;
+		front = 0;
 
-		container = nullptr;
+		for (int i = 0; i < SIZE; i++)
+		{
+			container[i] = NULL;
+		}
 
 	}
 	void push(T data)
 	{
-		T* resize = new T[highset];
-		for (int i = 0; i < capacity; i++)
+		if (rear == SIZE)
 		{
-			resize[i] = NULL;
+			cout << "linear queue overflow" << endl;
 		}
+		else
+		{
+			continer[rear++] = data;
+		}
+	}
+	void pop()
+	{
+		if (front == rear)
+		{
+			cout << "Queue is empty" << endl;
+			exit(1);
+		}
+		else
+		{
+			container[front++] = NULL;
+		}
+	}
+	const bool empty() const
+	{
+		return front == rear;
+	}
+
+	const T& peek()const
+	{
+		if (empty())
+		{
+			cout << "Queue is empty" << endl;
+			exit(1);
+		}
+		return container[front];
 	}
 };
 
 int main()
 {
-
+	Queue<int> queue;
 
 	return 0;
 }
