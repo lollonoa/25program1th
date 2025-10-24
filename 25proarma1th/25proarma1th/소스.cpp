@@ -1,67 +1,81 @@
 #include "stdafx.h"
-#define SIZE 5
 template<typename T>
+#define SIZE 4
 class Queue
 {
 private:
 	int rear;
 	int front;
 
-	T* container[SIZE];
+	T container[SIZE];
 public:
 	Queue()
 	{
-		rear = 0;
-		front = 0;
+		rear = SIZE - 1;
+		front = SIZE - 1;
 
 		for (int i = 0; i < SIZE; i++)
 		{
 			container[i] = NULL;
 		}
-
 	}
 	void push(T data)
 	{
-		if (rear == SIZE)
+		if (front == (rear + 1) % SIZE)
 		{
-			cout << "linear queue overflow" << endl;
+			cout << "circle queue overflow" << endl;
 		}
 		else
 		{
-			continer[rear++] = data;
+			rear = (rear + 1) % SIZE;
+			container[rear] = data;
 		}
 	}
 	void pop()
 	{
-		if (front == rear)
+		if (empty())
 		{
-			cout << "Queue is empty" << endl;
+			cout << "circle queue is empty" << endl;
+		}
+		else
+		{
+		front = (front + 1) % SIZE;
+		container[front] = NULL;
+		}
+	}
+	const bool& empty()
+	{
+		return front == rear;
+	}
+	const T& peek()
+	{
+		if (empty())
+		{
 			exit(1);
 		}
 		else
 		{
-			container[front++] = NULL;
+			return container[(front + 1) % SIZE];
 		}
-	}
-	const bool empty() const
-	{
-		return front == rear;
-	}
-
-	const T& peek()const
-	{
-		if (empty())
-		{
-			cout << "Queue is empty" << endl;
-			exit(1);
-		}
-		return container[front];
 	}
 };
 
 int main()
 {
 	Queue<int> queue;
+	queue.push(10);
+	queue.push(20);
+	queue.push(30);
 
+	while (queue.empty() == false)
+	{
+		cout << queue.peek() << endl;
+
+		queue.pop();
+	}
+	queue.push(40);
+	queue.push(50);
+	queue.push(60);
+	
 	return 0;
 }
