@@ -1,81 +1,80 @@
 #include "stdafx.h"
 template<typename T>
-#define SIZE 4
-class Queue
+
+class PriorityQueue
 {
 private:
-	int rear;
-	int front;
+	T* container;
 
-	T container[SIZE];
+	int index;
+	int capacity;
 public:
-	Queue()
-	{
-		rear = SIZE - 1;
-		front = SIZE - 1;
+PriorityQueue()
+{
+	index = 0;
+	capacity = 0;
+	container = nullptr;
+}
 
-		for (int i = 0; i < SIZE; i++)
-		{
-			container[i] = NULL;
-		}
-	}
-	void push(T data)
+void resize(int newSize)
+{
+	capacity = newSize;
+
+	T* temporary = new T[capacity];
+	for (int i = 0; i < capacity; i++)
 	{
-		if (front == (rear + 1) % SIZE)
-		{
-			cout << "circle queue overflow" << endl;
-		}
-		else
-		{
-			rear = (rear + 1) % SIZE;
-			container[rear] = data;
-		}
+		temporary[i] = NULL;
 	}
-	void pop()
+	for (int i = 0; i < index; i++)
 	{
-		if (empty())
-		{
-			cout << "circle queue is empty" << endl;
-		}
-		else
-		{
-		front = (front + 1) % SIZE;
-		container[front] = NULL;
-		}
+		temporary[i] = container[i];
 	}
-	const bool& empty()
+	delete[]container;
+	container = temporary;
+}
+void push(T data)
+{
+	if (capacity <= 0)
 	{
-		return front == rear;
+		resize(1);
 	}
-	const T& peek()
+	else if (index >= capacity)
 	{
-		if (empty())
-		{
-			exit(1);
-		}
-		else
-		{
-			return container[(front + 1) % SIZE];
-		}
+		resize(capacity * 2);
 	}
+	container[index++] = data;
+
+	int child = index - 1;
+	int parent = (child - 1) / 2;
+
+	while (child > 0)
+	{
+		if (container[parent] < container[child])
+		{
+			swap(container[parent], container[child]);
+		}
+		child = parent;
+		parent = (child - 1) / 2;
+	}
+	const T& top()
+	{
+
+	}
+	const bool & empty()
+
+	~PriorityQueue()
+	{
+
+	}
+}
 };
 
 int main()
 {
-	Queue<int> queue;
-	queue.push(10);
-	queue.push(20);
-	queue.push(30);
-
-	while (queue.empty() == false)
-	{
-		cout << queue.peek() << endl;
-
-		queue.pop();
-	}
-	queue.push(40);
-	queue.push(50);
-	queue.push(60);
-	
+	PriorityQueue<int> prioritQueue;
+	prioritQueue.push(10);
+	prioritQueue.push(20);
+	prioritQueue.push(5);
+	prioritQueue.push(33);
 	return 0;
 }

@@ -24,6 +24,7 @@
     <ProjectGuid>{bd763dfc-433b-4c8f-ba3e-adce6e9a98fc}</ProjectGuid>
     <RootNamespace>class11thsingleLilnkedList</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>class 1th (single Lilnked List)</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -123,7 +124,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="class 11th (single Lilnked List).cpp" />
+    <ClCompile Include="class 1th %28single Lilnked List%29.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,3 +1,4 @@
-﻿  class 11th (single Lilnked List).cpp
-D:\Users\서동건\25program1th\25proarma1th\class 11th (single Lilnked List)\class 11th (single Lilnked List).cpp(120,1): warning C4172: 지역 변수 또는 임시 의 주소를 반환하는 중
-  class 11th (single Lilnked List).vcxproj -> D:\Users\서동건\25program1th\25proarma1th\x64\Debug\class 11th (single Lilnked List).exe
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(538,5): warning MSB8028: 중간 디렉터리(x64\Debug\)에 다른 프로젝트(class 11th (single Lilnked List).vcxproj)에서 공유하는 파일이 포함되어 있습니다.  이로 인해 잘못된 정리 및 다시 빌드 동작이 수행될 수 있습니다.
+  class 1th (single Lilnked List).cpp
+D:\Users\서동건\25program1th\25proarma1th\class 11th (single Lilnked List)\class 1th (single Lilnked List).cpp(120,1): warning C4172: 지역 변수 또는 임시 의 주소를 반환하는 중
+  class 11th (single Lilnked List).vcxproj -> D:\Users\서동건\25program1th\25proarma1th\x64\Debug\class 1th (single Lilnked List).exe

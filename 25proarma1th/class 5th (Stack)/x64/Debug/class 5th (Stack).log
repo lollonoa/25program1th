@@ -1,0 +1,4 @@
+﻿  class 5th (Stack).cpp
+D:\Users\서동건\25program1th\25proarma1th\class 5th (Stack)\class 5th (Stack).cpp(72,1): warning C4172: 지역 변수 또는 임시 의 주소를 반환하는 중
+D:\Users\서동건\25program1th\25proarma1th\class 5th (Stack)\class 5th (Stack).cpp(64,1): warning C4172: 지역 변수 또는 임시 의 주소를 반환하는 중
+  class 5th (Stack).vcxproj -> D:\Users\서동건\25program1th\25proarma1th\x64\Debug\class 5th (Stack).exe
