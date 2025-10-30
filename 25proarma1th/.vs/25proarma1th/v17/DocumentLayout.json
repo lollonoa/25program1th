@@ -50,8 +50,21 @@
       "DocumentGroups": [
         {
           "DockedHeight": 147,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "\uC18C\uC2A4.cpp",
+              "DocumentMoniker": "D:\\Users\\\uC11C\uB3D9\uAC74\\25program1th\\25proarma1th\\25proarma1th\\\uC18C\uC2A4.cpp",
+              "RelativeDocumentMoniker": "25proarma1th\\\uC18C\uC2A4.cpp",
+              "ToolTip": "D:\\Users\\\uC11C\uB3D9\uAC74\\25program1th\\25proarma1th\\25proarma1th\\\uC18C\uC2A4.cpp",
+              "RelativeToolTip": "25proarma1th\\\uC18C\uC2A4.cpp",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAcwJ0AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-10-15T09:10:45.469Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -63,19 +76,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-10-28T10:17:22.047Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "\uC18C\uC2A4.cpp",
-              "DocumentMoniker": "D:\\Users\\\uC11C\uB3D9\uAC74\\25program1th\\25proarma1th\\25proarma1th\\\uC18C\uC2A4.cpp",
-              "RelativeDocumentMoniker": "25proarma1th\\\uC18C\uC2A4.cpp",
-              "ToolTip": "D:\\Users\\\uC11C\uB3D9\uAC74\\25program1th\\25proarma1th\\25proarma1th\\\uC18C\uC2A4.cpp",
-              "RelativeToolTip": "25proarma1th\\\uC18C\uC2A4.cpp",
-              "ViewState": "AgIAABkAAAAAAAAAAAAAADkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-10-15T09:10:45.469Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",

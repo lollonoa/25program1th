@@ -53,7 +53,90 @@ public:
 		return (unsigned int)sum % capacity;
 	}
 
-	void insart(KEY key, VALEU value)
+	void insert(KEY key, VALEU value)
+	{
+		//해시 함수를 통해서 값을 받는 임시 변수
+		int hashIndex = hash_function(key);
+		//새로운 노드를 생성합니다.
+		Node* newNode = new Node;
+
+		newNode->key = key;
+		newNode->value = value;
+		newNode->next = nullptr;
+		//노드가 1개라도 존재하지 않는디면
+		if (bucket[hashIndex].count == 0)
+		{
+			//bucket[hashIndex]의 head포인터가 newNode를 가리키게 합니다
+			bucket[hashIndex].head = newNode;
+		}
+		else
+		{
+			newNode->next = bucket[hashIndex].head;
+
+			bucket[hashIndex].head = newNode;
+		}
+		//bucket[hashIndex]의 ciunt를 증가 시킵니다
+		bucket[hashIndex].count++;
+
+		size++;
+	}
+	void erase(KEY key)
+	{
+		//1. 해시 함수를 통해서 값을 받는 임시변수
+		int hashIndex = hash_function(key);
+
+		//2.Node를 탐색할 수 있는 포인터 변수 선언
+		Node* currentNode = bucket[hashIndex].head;
+		//3.이전Node를 저장할 수 있는 포인터 변수 선언
+		Node* previousNode = nullptr;
+
+		//4.currentNode가 nullptr과 같다면 함수를 종료합니다
+		if (currentNode == nullptr)
+		{
+			cout << "not key found..." << endl;
+		}
+		else
+		{
+			//5.currentNode를 이용해서 내가 찾고자 하는 key값을 찾습니다.
+			while (currentNode != nullptr)
+			{
+				if (currentNode->key == key)
+				{
+
+				if (currentNode == bucket[hashIndex].head)
+				{
+					bucket[hashIndex].head = currentNode->next;
+				}
+				else
+				{
+					previousNode->next = currentNode->next;
+				}
+				size--;
+
+				bucket[hashIndex].count--;
+
+				delete currentNode;
+
+				return;
+			}
+			else
+			{
+				previousNode = currentNode;
+
+				currentNode = currentNode->next;
+			}
+				
+			}
+
+		}
+	}
+
+	const int bucket_count()
+	{
+
+	}
+
+	const float& load_factor()
 	{
 
 	}
@@ -63,8 +146,15 @@ int main()
 {
 	HashTable < const char*, int> hashtable;
 
-	cout << hashtable.hash_function("Korea") << endl;
-	cout << hashtable.hash_function("Brazil") << endl;
-	cout << hashtable.hash_function("China") << endl;
+	hashtable.insert("Abyssal Mask", 3000);
+	hashtable.insert("Bami's Cinder", 1000);
+
+	hashtable.insert("Chain Vest", 800);
+	
+	hashtable.erase("Abyssal Mask");
+	hashtable.erase("Galefornce");
+
+	cout << "Load Factor : " << hashtable.load_factor()<<endl;
+	cout << "Bucket count : " << hashtable.load_factor()<<endl;
 	return 0;
 }
