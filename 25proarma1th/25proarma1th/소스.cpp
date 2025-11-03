@@ -20,12 +20,62 @@ public:
 		vertex = nullptr;
 		matrix = nullptr;
 	}
+	void push(T data)
+	{
+		if (capacity <= 0)
+		{
+			resize(1);
+		}
+		else if (size >= capacity)
+		{
+			resize(capacity * 2);
+		}
+		
+		vertex[size++] = data;
+	}
+	void resize(int newSize)
+	{
+		capacity = newSize;
+		T* container = new T[capacity];
+
+		for (int i = 0; i < capacity; i++)
+		{
+			container[i] = NULL;
+		}
+
+		for (int i = 0; i < size; i++)
+		{
+			container[i] = vertex[i];
+		}
+		delete[]vertex;
+
+		vertex = container;
+	}
+	void edge(int i, int j)
+	{
+		if (size == 0)
+		{
+			cout << "adjacency matrix is empty" << endl;
+			return;
+		}
+		if (i < 0 || j < 0 || i >= size || j >= size)
+		{
+			cout << "index out of renge" < endl;
+			return;
+		}
+		matrix[i][j] = 1;
+		matrix[j][i] = 1;
+	}
 
 };
 
 
 int main()
 {
-	Graph<int> graph;
+	Graph<char> graph;
+
+	graph.push('A');
+	graph.push('B');
+	graph.push('C');
 	return 0;
 }
