@@ -25,6 +25,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "class9th (HashTable)", "cla
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "class 10th(Adhacency Matrix)", "class 10th(Adhacency Matrix)\class 10th(Adhacency Matrix).vcxproj", "{53C078D9-5017-4B38-A280-DE187287853B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "class11th(Adijacency List)", "class11th(Adijacency List)\class11th(Adijacency List).vcxproj", "{69C77F60-39A2-46EE-AD78-A357EB693F0B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -121,6 +123,14 @@ Global
 		{53C078D9-5017-4B38-A280-DE187287853B}.Release|x64.Build.0 = Release|x64
 		{53C078D9-5017-4B38-A280-DE187287853B}.Release|x86.ActiveCfg = Release|Win32
 		{53C078D9-5017-4B38-A280-DE187287853B}.Release|x86.Build.0 = Release|Win32
+		{69C77F60-39A2-46EE-AD78-A357EB693F0B}.Debug|x64.ActiveCfg = Debug|x64
+		{69C77F60-39A2-46EE-AD78-A357EB693F0B}.Debug|x64.Build.0 = Debug|x64
+		{69C77F60-39A2-46EE-AD78-A357EB693F0B}.Debug|x86.ActiveCfg = Debug|Win32
+		{69C77F60-39A2-46EE-AD78-A357EB693F0B}.Debug|x86.Build.0 = Debug|Win32
+		{69C77F60-39A2-46EE-AD78-A357EB693F0B}.Release|x64.ActiveCfg = Release|x64
+		{69C77F60-39A2-46EE-AD78-A357EB693F0B}.Release|x64.Build.0 = Release|x64
+		{69C77F60-39A2-46EE-AD78-A357EB693F0B}.Release|x86.ActiveCfg = Release|Win32
+		{69C77F60-39A2-46EE-AD78-A357EB693F0B}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
