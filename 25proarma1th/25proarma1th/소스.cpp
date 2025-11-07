@@ -1,8 +1,8 @@
-#include "../25proarma1th/stdafx.h"
+#include <iostream>
 
 
 int main()
 {
-	
+
 	return 0;
 }
