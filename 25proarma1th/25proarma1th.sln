@@ -27,6 +27,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "class 10th(Adhacency Matrix
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "class11th(Adijacency List)", "class11th(Adijacency List)\class11th(Adijacency List).vcxproj", "{69C77F60-39A2-46EE-AD78-A357EB693F0B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "class 12th (Binary Search Tree)", "class 12th (Binary Search Tree)\class 12th (Binary Search Tree).vcxproj", "{16737ADD-E67F-46B8-AA3E-F420911A0BCA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -131,6 +133,14 @@ Global
 		{69C77F60-39A2-46EE-AD78-A357EB693F0B}.Release|x64.Build.0 = Release|x64
 		{69C77F60-39A2-46EE-AD78-A357EB693F0B}.Release|x86.ActiveCfg = Release|Win32
 		{69C77F60-39A2-46EE-AD78-A357EB693F0B}.Release|x86.Build.0 = Release|Win32
+		{16737ADD-E67F-46B8-AA3E-F420911A0BCA}.Debug|x64.ActiveCfg = Debug|x64
+		{16737ADD-E67F-46B8-AA3E-F420911A0BCA}.Debug|x64.Build.0 = Debug|x64
+		{16737ADD-E67F-46B8-AA3E-F420911A0BCA}.Debug|x86.ActiveCfg = Debug|Win32
+		{16737ADD-E67F-46B8-AA3E-F420911A0BCA}.Debug|x86.Build.0 = Debug|Win32
+		{16737ADD-E67F-46B8-AA3E-F420911A0BCA}.Release|x64.ActiveCfg = Release|x64
+		{16737ADD-E67F-46B8-AA3E-F420911A0BCA}.Release|x64.Build.0 = Release|x64
+		{16737ADD-E67F-46B8-AA3E-F420911A0BCA}.Release|x86.ActiveCfg = Release|Win32
+		{16737ADD-E67F-46B8-AA3E-F420911A0BCA}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
